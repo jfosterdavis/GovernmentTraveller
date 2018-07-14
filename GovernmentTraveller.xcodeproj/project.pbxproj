@@ -16,6 +16,7 @@
 		F678D72A20FA551A00B2770A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F678D72920FA551A00B2770A /* Assets.xcassets */; };
 		F678D72D20FA551A00B2770A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F678D72B20FA551A00B2770A /* LaunchScreen.storyboard */; };
 		F678D73820FA551A00B2770A /* GovernmentTravellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678D73720FA551A00B2770A /* GovernmentTravellerTests.swift */; };
+		F678D74320FA599B00B2770A /* GTMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678D74220FA599B00B2770A /* GTMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		F678D73320FA551A00B2770A /* GovernmentTravellerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GovernmentTravellerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F678D73720FA551A00B2770A /* GovernmentTravellerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovernmentTravellerTests.swift; sourceTree = "<group>"; };
 		F678D73920FA551A00B2770A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F678D74220FA599B00B2770A /* GTMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F678D72020FA551700B2770A /* AppDelegate.swift */,
 				F678D72220FA551700B2770A /* FirstViewController.swift */,
 				F678D72420FA551700B2770A /* SecondViewController.swift */,
+				F678D74220FA599B00B2770A /* GTMenuViewController.swift */,
 				F678D72620FA551700B2770A /* Main.storyboard */,
 				F678D72920FA551A00B2770A /* Assets.xcassets */,
 				F678D72B20FA551A00B2770A /* LaunchScreen.storyboard */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F678D74320FA599B00B2770A /* GTMenuViewController.swift in Sources */,
 				F678D72520FA551700B2770A /* SecondViewController.swift in Sources */,
 				F678D72120FA551700B2770A /* AppDelegate.swift in Sources */,
 				F678D72320FA551700B2770A /* FirstViewController.swift in Sources */,
