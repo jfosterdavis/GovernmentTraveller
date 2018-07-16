@@ -17,9 +17,20 @@ public struct ZMMenuItems {
     
     public static var CustomItems = [ZMMenuItem]()
     
-    static let Acknowledgement = ZMMenuItem(displayTitle: "Acknowledgements",
+    static let Acknowledgement = ZMMenuItem(displayTitle: "About",
                                             destinationVC: UIStoryboard(name: "ZMAppFoundation", bundle: MenuBundle).instantiateViewController(withIdentifier: "Acknowledgements"),
                                             displayIcon: nil)
     
 }
 
+public struct ZMAcknowledgementsContent {
+    public static let StandardItems: [String] = [Copyright, ZMFoundation]
+    
+    public static var CustomItems = [String]()
+    
+    static let Copyright = "Copyright (c) 2018 Zero Mu, LLC"
+    
+    static let ZMFoundation = "This app uses the ZMAppFoundation framework to deliver you a consistent and well-tested app experience.  https://cocoapods.org/pods/ZMAppFoundation"
+
+    //TODO: app version and description.
+}
