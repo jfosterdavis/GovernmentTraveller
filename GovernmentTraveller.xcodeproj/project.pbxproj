@@ -18,6 +18,7 @@
 		F678D73820FA551A00B2770A /* GovernmentTravellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678D73720FA551A00B2770A /* GovernmentTravellerTests.swift */; };
 		F678D74320FA599B00B2770A /* GTMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678D74220FA599B00B2770A /* GTMenuViewController.swift */; };
 		F678D74520FBB13000B2770A /* CustomMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678D74420FBB13000B2770A /* CustomMenuItems.swift */; };
+		F678D74D20FD052700B2770A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F678D74B20FD052700B2770A /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F678D73920FA551A00B2770A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F678D74220FA599B00B2770A /* GTMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMenuViewController.swift; sourceTree = "<group>"; };
 		F678D74420FBB13000B2770A /* CustomMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItems.swift; sourceTree = "<group>"; };
+		F678D74C20FD052700B2770A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,13 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				F678D72020FA551700B2770A /* AppDelegate.swift */,
-				F678D72220FA551700B2770A /* FirstViewController.swift */,
-				F678D72420FA551700B2770A /* SecondViewController.swift */,
-				F678D74220FA599B00B2770A /* GTMenuViewController.swift */,
-				F678D74420FBB13000B2770A /* CustomMenuItems.swift */,
-				F678D72620FA551700B2770A /* Main.storyboard */,
+				F678D74A20FD03D400B2770A /* View */,
+				F678D74920FD03C300B2770A /* Model */,
+				F678D74820FD03B500B2770A /* Controller */,
 				F678D72920FA551A00B2770A /* Assets.xcassets */,
-				F678D72B20FA551A00B2770A /* LaunchScreen.storyboard */,
 				F678D72E20FA551A00B2770A /* Info.plist */,
 			);
 			path = GovernmentTraveller;
@@ -135,6 +134,34 @@
 				F678D73920FA551A00B2770A /* Info.plist */,
 			);
 			path = GovernmentTravellerTests;
+			sourceTree = "<group>";
+		};
+		F678D74820FD03B500B2770A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F678D72220FA551700B2770A /* FirstViewController.swift */,
+				F678D72420FA551700B2770A /* SecondViewController.swift */,
+				F678D74220FA599B00B2770A /* GTMenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F678D74920FD03C300B2770A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F678D74420FBB13000B2770A /* CustomMenuItems.swift */,
+				F678D74B20FD052700B2770A /* Model.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F678D74A20FD03D400B2770A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F678D72620FA551700B2770A /* Main.storyboard */,
+				F678D72B20FA551A00B2770A /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +334,7 @@
 				F678D72120FA551700B2770A /* AppDelegate.swift in Sources */,
 				F678D72320FA551700B2770A /* FirstViewController.swift in Sources */,
 				F678D74520FBB13000B2770A /* CustomMenuItems.swift in Sources */,
+				F678D74D20FD052700B2770A /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +603,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F678D74B20FD052700B2770A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F678D74C20FD052700B2770A /* Model.xcdatamodel */,
+			);
+			currentVersion = F678D74C20FD052700B2770A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F678D71520FA551600B2770A /* Project object */;
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AirTravelCost" representedClassName="AirTravelCost" syncable="YES" codeGenerationType="class">
+        <attribute name="airline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cost" optional="YES" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="country" optional="YES" syncable="YES"/>
+        <attribute name="dailyMIEAllowed" optional="YES" syncable="YES"/>
+        <attribute name="lodgingAllowed" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="LodgingCost" representedClassName="LodgingCost" syncable="YES" codeGenerationType="class">
+        <attribute name="actualCost" optional="YES" syncable="YES"/>
+        <attribute name="dailyRate" optional="YES" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="POVCost" representedClassName="POVCost" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="povMiles" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="povRate" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="Trip" representedClassName="Trip" syncable="YES" codeGenerationType="class">
+        <attribute name="firstDay" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastDay" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Trip" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Location" positionX="-54" positionY="36" width="128" height="120"/>
+        <element name="AirTravelCost" positionX="-36" positionY="63" width="128" height="90"/>
+        <element name="POVCost" positionX="-18" positionY="72" width="128" height="90"/>
+        <element name="LodgingCost" positionX="0" positionY="90" width="128" height="120"/>
+    </elements>
+</model>
