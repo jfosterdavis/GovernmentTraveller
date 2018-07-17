@@ -2,21 +2,21 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
         <attribute name="actualCost" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="claimableOverride" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="costCategory" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="expectedCost" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="isClaimableOverride" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isRecieptKept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="recieptImage" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="recieptKept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="expenses" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="FinalExpenseCalculation" representedClassName="FinalExpenseCalculation" syncable="YES" codeGenerationType="class">
-        <attribute name="archived" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="calculatedTripCost" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="dateCalculated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="reconciled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isReconciled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalLodgingCost" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="totalMIEOwed" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="totalOtherClaimableCost" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
@@ -31,11 +31,11 @@
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dailyMIEAllowed" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="dateLastValidated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isOconus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lodgingAllowed" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="oconus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="locationDuration" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationDuration" inverseName="location" inverseEntity="LocationDuration" syncable="YES"/>
     </entity>
     <entity name="LocationDuration" representedClassName="LocationDuration" syncable="YES" codeGenerationType="class">
@@ -54,11 +54,11 @@
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="lodgings" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="OnTravelChecklist" representedClassName="OnTravelChecklist" syncable="YES" codeGenerationType="class">
+        <attribute name="isLodgingReciept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isOtherReciepts" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isRentalCarReciept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isTicketReciept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lastModified" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="lodgingReciept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="otherReciepts" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="rentalCarReciept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="ticketReciept" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="onTravelChecklist" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="PostTripChecklist" representedClassName="PostTripChecklist" syncable="YES" codeGenerationType="class">
@@ -68,12 +68,12 @@
         <attribute name="actualPersonalDisbursementDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="expectedGTCCDisbursement" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="expectedPersonalDisbursement" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="gTCCDisbursed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="gTCCPaid" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="gTCCPaidDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isGTCCDisbursed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isGTCCPaid" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPersonalDisbursed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isTravelClaimSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lastModified" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="personalDisbursed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="travelClaimSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="finalExpenseCalculation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FinalExpenseCalculation" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="postChecklist" inverseEntity="Trip" syncable="YES"/>
     </entity>
@@ -85,14 +85,14 @@
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="povs" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="PreTripChecklist" representedClassName="PreTripChecklist" syncable="YES" codeGenerationType="class">
-        <attribute name="activateGTCC" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="addRewardsAccounts" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="authSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="collectConfirmationNumbers" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isActivateGTCC" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isAddRewardsAccounts" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isAuthSubmitted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPassport" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPrintOrders" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isRecieveTickets" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lastModified" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="passport" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="printOrders" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="recieveTickets" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="tip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="preChecklist" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="TicketTravelCost" representedClassName="TicketTravelCost" syncable="YES" codeGenerationType="class">
@@ -103,8 +103,8 @@
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="tickets" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="Trip" representedClassName="Trip" syncable="YES" codeGenerationType="class">
-        <attribute name="archived" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="firstDay" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lastDay" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="expenses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="trip" inverseEntity="Expense" syncable="YES"/>
@@ -118,16 +118,16 @@
         <relationship name="tickets" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TicketTravelCost" inverseName="trip" inverseEntity="TicketTravelCost" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Trip" positionX="-63" positionY="-18" width="128" height="240"/>
-        <element name="Location" positionX="-54" positionY="36" width="128" height="195"/>
-        <element name="TicketTravelCost" positionX="-36" positionY="63" width="128" height="120"/>
-        <element name="POVCost" positionX="-18" positionY="72" width="128" height="120"/>
-        <element name="LodgingCost" positionX="0" positionY="90" width="128" height="150"/>
-        <element name="Expense" positionX="18" positionY="117" width="128" height="195"/>
-        <element name="LocationDuration" positionX="-27" positionY="108" width="128" height="105"/>
-        <element name="FinalExpenseCalculation" positionX="-9" positionY="126" width="128" height="225"/>
-        <element name="PostTripChecklist" positionX="0" positionY="153" width="128" height="255"/>
-        <element name="PreTripChecklist" positionX="9" positionY="162" width="128" height="180"/>
-        <element name="OnTravelChecklist" positionX="18" positionY="171" width="128" height="135"/>
+        <element name="Trip" positionX="-218" positionY="-159" width="128" height="238"/>
+        <element name="Location" positionX="297" positionY="-72" width="128" height="193"/>
+        <element name="TicketTravelCost" positionX="-2" positionY="69" width="128" height="120"/>
+        <element name="POVCost" positionX="-9" positionY="198" width="128" height="120"/>
+        <element name="LodgingCost" positionX="-9" positionY="323" width="128" height="148"/>
+        <element name="Expense" positionX="-9" positionY="489" width="128" height="193"/>
+        <element name="LocationDuration" positionX="-0" positionY="-72" width="128" height="105"/>
+        <element name="FinalExpenseCalculation" positionX="-252" positionY="261" width="128" height="223"/>
+        <element name="PostTripChecklist" positionX="-495" positionY="285" width="189" height="253"/>
+        <element name="PreTripChecklist" positionX="-470" positionY="-117" width="164" height="178"/>
+        <element name="OnTravelChecklist" positionX="-477" positionY="81" width="128" height="133"/>
     </elements>
 </model>
