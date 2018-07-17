@@ -41,6 +41,8 @@
     <entity name="LocationDuration" representedClassName="LocationDuration" syncable="YES" codeGenerationType="class">
         <attribute name="arriveDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="departDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationDuration" inverseEntity="Location" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="locations" inverseEntity="Trip" syncable="YES"/>
     </entity>
@@ -50,6 +52,7 @@
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="expectedCost" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="lodgings" inverseEntity="Trip" syncable="YES"/>
     </entity>
@@ -81,6 +84,7 @@
         <attribute name="actualPOVMiles" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="expectedPOVMiles" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="povRate" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="povs" inverseEntity="Trip" syncable="YES"/>
     </entity>
@@ -100,6 +104,8 @@
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="expectedCost" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="tickets" inverseEntity="Trip" syncable="YES"/>
     </entity>
     <entity name="Trip" representedClassName="Trip" syncable="YES" codeGenerationType="class">
@@ -119,12 +125,12 @@
     </entity>
     <elements>
         <element name="Trip" positionX="-218" positionY="-159" width="128" height="238"/>
-        <element name="Location" positionX="297" positionY="-72" width="128" height="193"/>
-        <element name="TicketTravelCost" positionX="-2" positionY="69" width="128" height="120"/>
-        <element name="POVCost" positionX="-9" positionY="198" width="128" height="120"/>
-        <element name="LodgingCost" positionX="-9" positionY="323" width="128" height="148"/>
-        <element name="Expense" positionX="-9" positionY="489" width="128" height="193"/>
-        <element name="LocationDuration" positionX="-0" positionY="-72" width="128" height="105"/>
+        <element name="Location" positionX="160" positionY="-112" width="128" height="193"/>
+        <element name="TicketTravelCost" positionX="-9" positionY="69" width="128" height="148"/>
+        <element name="POVCost" positionX="-2" positionY="225" width="128" height="133"/>
+        <element name="LodgingCost" positionX="7" positionY="368" width="128" height="163"/>
+        <element name="Expense" positionX="16" positionY="543" width="128" height="193"/>
+        <element name="LocationDuration" positionX="-18" positionY="-114" width="128" height="133"/>
         <element name="FinalExpenseCalculation" positionX="-252" positionY="261" width="128" height="223"/>
         <element name="PostTripChecklist" positionX="-495" positionY="285" width="189" height="253"/>
         <element name="PreTripChecklist" positionX="-470" positionY="-117" width="164" height="178"/>
