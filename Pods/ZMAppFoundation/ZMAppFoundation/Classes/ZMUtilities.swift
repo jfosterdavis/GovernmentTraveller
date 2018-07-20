@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 struct ZMUtilities {
     
@@ -547,3 +548,5 @@ extension BinaryInteger {
 }
 
 
+//typalise needed for coreData
+public typealias Batch = (_ workerContext: NSManagedObjectContext) -> ()

@@ -1,7 +1,7 @@
 PODS:
   - GaugeKit (0.4.5)
   - SideMenu (4.0.0)
-  - ZMAppFoundation (0.2.1):
+  - ZMAppFoundation (0.2.3):
     - GaugeKit
     - SideMenu
 
@@ -27,7 +27,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   GaugeKit: 7872069a8aed2d26b17fca110fe1ab59722f8a33
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
-  ZMAppFoundation: 3a899f2a6e00c13b35483f7a7bdae371402b5212
+  ZMAppFoundation: 2e0fb57551990f99000500e7b98e463df77755e0
 
 PODFILE CHECKSUM: 9308cedaa21beb6d1cfba8deaeaf33a71f5ebb90
 
